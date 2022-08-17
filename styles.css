@@ -1,0 +1,36 @@
+h1{
+    font-family: 'Black Ops One', cursive;
+    color: rgb(10, 255, 45);
+    font-size: 3rem;
+    margin: 2% 0 0%;
+    font-weight: 400;
+}
+h3{
+    color: gold;
+    font-family: Helvetica, sans-serif;
+}
+
+body{
+    text-align: center;
+    background-color: #000000;
+}
+
+
+.btn{
+   position: absolute;
+   left: 47%;
+   top: 40%;
+   border-radius: 50px;
+   padding: auto;
+   background-color: black;
+}
+
+.score{
+    color: rgb(0, 234, 255);
+    font-size: 1.5rem;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+}
+
+
