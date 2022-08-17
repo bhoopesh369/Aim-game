@@ -21,24 +21,30 @@ document.querySelector(".btn").addEventListener("click",nextItr);
 function nextItr(){
     playSound();
     if(remaining == 1){
-        alert("Your score : " + score);
-        location.reload(true); 
-        
-    }
-    remaining--;
-    if(start !=0 ){
-        score += 10 - Math.floor(0.003*(Date.now() - start));
+
+        setTimeout(()=>{
+            alert("Your score : " + score);
+            location.reload(true);
+        },100);
+    
     }
     else{
-        score += 10;
+        remaining--;
+        if(start !=0 ){
+            score += 10 - Math.floor(0.003*(Date.now() - start));
+        }
+        else{
+            score += 10;
+        }
+        start = Date.now();
+        document.querySelector(".remaining").innerHTML = "Remaining : " + remaining + "";
+        document.querySelector(".score").innerHTML = "Score : " + score + "";
+        x = random();
+        y = random();
+        target.style.left = "" + x +"%";
+        target.style.top = "" + y +"%";
+        
     }
-    start = Date.now();
-    document.querySelector(".remaining").innerHTML = "Remaining : " + remaining + "";
-    document.querySelector(".score").innerHTML = "Score : " + score + "";
-    x = random();
-    y = random();
-    target.style.left = "" + x +"%";
-    target.style.top = "" + y +"%";
     
     // setTimeout(()=>{
 
