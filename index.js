@@ -19,12 +19,12 @@ function random(){
 document.querySelector(".btn").addEventListener("click",nextItr);
 
 function nextItr(){
+    playSound();
     if(remaining == 1){
         alert("Your score : " + score);
         location.reload(true); 
         
     }
-    playSound();
     remaining--;
     if(start !=0 ){
         score += 10 - Math.floor(0.003*(Date.now() - start));
